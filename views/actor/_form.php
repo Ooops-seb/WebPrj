@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use app\models\Sexo;
-use iii\helpers\ArraiHelper; 
+use yii\helpers\ArrayHelper; 
 
 /** @var yii\web\View $this */
 /** @var app\models\Actor $model */
