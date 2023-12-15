@@ -39,8 +39,8 @@ class Director extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'DIR_ID' => 'Dir ID',
-            'DIR_NOMBRE' => 'Dir Nombre',
+            'DIR_ID' => 'ID',
+            'DIR_NOMBRE' => 'Nombre',
         ];
     }
 

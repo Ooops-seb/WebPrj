@@ -39,8 +39,8 @@ class Sexo extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'SEX_ID' => 'Sex ID',
-            'SEX_NOMBRE' => 'Sex Nombre',
+            'SEX_ID' => 'ID',
+            'SEX_NOMBRE' => 'Nombre',
         ];
     }
 

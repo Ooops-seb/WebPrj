@@ -49,13 +49,13 @@ class Alquiler extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ALQ_ID' => 'Alq ID',
-            'SOC_ID' => 'Soc ID',
-            'PEL_ID' => 'Pel ID',
-            'ALQ_FECHA_DESDE' => 'Alq Fecha Desde',
-            'ALQ_FECHA_HASTA' => 'Alq Fecha Hasta',
-            'ALQ_VALOR' => 'Alq Valor',
-            'ALQ_FECHA_ENTREGA' => 'Alq Fecha Entrega',
+            'ALQ_ID' => 'ID',
+            'SOC_ID' => 'Socio',
+            'PEL_ID' => 'Película',
+            'ALQ_FECHA_DESDE' => 'Fecha Desde',
+            'ALQ_FECHA_HASTA' => 'Fecha Hasta',
+            'ALQ_VALOR' => 'Valor',
+            'ALQ_FECHA_ENTREGA' => 'Fecha Entrega',
         ];
     }
 

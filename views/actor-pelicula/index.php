@@ -24,23 +24,33 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
 
-            'APL_ID',
-            'ACT_ID',
-            'PEL_ID',
-            'APL_PAPEL',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, ActorPelicula $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'APL_ID' => $model->APL_ID]);
-                 }
-            ],
+        [
+            'attribute' => 'ACT_ID',
+            'value' => function ($model) {
+                return $model->aCT->ACT_NOMBRE; 
+            },
         ],
-    ]); ?>
+        [
+            'attribute' => 'PEL_ID',
+            'value' => function ($model) {
+                return $model->pEL->PEL_NOMBRE; 
+            },
+        ],
+        'APL_PAPEL',
+        [
+            'class' => ActionColumn::className(),
+            'urlCreator' => function ($action, ActorPelicula $model, $key, $index, $column) {
+                return Url::toRoute([$action, 'APL_ID' => $model->APL_ID]);
+            },
+        ],
+    ],
+]); ?>
+
 
 
 </div>

@@ -39,8 +39,8 @@ class Formato extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'FOR_ID' => 'For ID',
-            'FOR_NOMBRE' => 'For Nombre',
+            'FOR_ID' => 'ID',
+            'FOR_NOMBRE' => 'Nombre',
         ];
     }
 

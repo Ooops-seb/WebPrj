@@ -7,6 +7,7 @@ use app\models\PeliculaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use Yii;
 
 /**
  * PeliculaController implements the CRUD actions for Pelicula model.

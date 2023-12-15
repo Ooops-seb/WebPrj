@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Director $model */
 
-$this->title = $model->DIR_ID;
+$this->title = $model->DIR_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Directors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'DIR_ID',
             'DIR_NOMBRE',
         ],
     ]) ?>

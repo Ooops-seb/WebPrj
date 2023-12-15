@@ -44,12 +44,12 @@ class Socio extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'SOC_ID' => 'Soc ID',
-            'SOC_CEDULA' => 'Soc Cedula',
-            'SOC_NOMBRE' => 'Soc Nombre',
-            'SOC_DIRECCION' => 'Soc Direccion',
-            'SOC_TELEFONO' => 'Soc Telefono',
-            'SOC_CORREO' => 'Soc Correo',
+            'SOC_ID' => 'ID',
+            'SOC_CEDULA' => 'Cédula',
+            'SOC_NOMBRE' => 'Nombre',
+            'SOC_DIRECCION' => 'Dirección',
+            'SOC_TELEFONO' => 'Teléfono',
+            'SOC_CORREO' => 'Correo',
         ];
     }
 

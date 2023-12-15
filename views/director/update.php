@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Director $model */
 
-$this->title = 'Update Director: ' . $model->DIR_ID;
+$this->title = 'Update Director: ' . $model->DIR_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Directors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->DIR_ID, 'url' => ['view', 'DIR_ID' => $model->DIR_ID]];
 $this->params['breadcrumbs'][] = 'Update';

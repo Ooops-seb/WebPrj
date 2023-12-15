@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Formato $model */
 
-$this->title = $model->FOR_ID;
+$this->title = $model->FOR_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Formatos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'FOR_ID',
             'FOR_NOMBRE',
         ],
     ]) ?>

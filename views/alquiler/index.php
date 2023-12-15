@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\AlquilerSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Alquilers';
+$this->title = 'Alquiler';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="alquiler-index">
@@ -30,8 +30,18 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'ALQ_ID',
-            'SOC_ID',
-            'PEL_ID',
+            [
+                'attribute' => 'SOC_ID',
+                'value' => function ($model) {
+                    return $model->sOC->SOC_NOMBRE; 
+                },
+            ],
+            [
+                'attribute' => 'PEL_ID',
+                'value' => function ($model) {
+                    return $model->pEL->PEL_NOMBRE; 
+                },
+            ],
             'ALQ_FECHA_DESDE',
             'ALQ_FECHA_HASTA',
             //'ALQ_VALOR',

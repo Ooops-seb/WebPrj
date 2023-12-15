@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /** @var app\models\Genero $model */
 
 $this->title = $model->GEN_ID;
-$this->params['breadcrumbs'][] = ['label' => 'Generos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Genéros', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

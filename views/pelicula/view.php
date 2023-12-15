@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Pelicula $model */
 
-$this->title = $model->PEL_ID;
+$this->title = $model->PEL_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Peliculas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -30,9 +30,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'PEL_ID',
-            'GEN_ID',
-            'DIR_ID',
-            'FOR_ID',
+            [
+                'label' => 'Genéro',
+                'value' => ($model->gEN ? $model->gEN->GEN_NOMBRE: 'N/A'),
+            ],
+            [
+                'label' => 'Director',
+                'value' => ($model->dIR ? $model->dIR->DIR_NOMBRE: 'N/A'),
+            ],
+            [
+                'label' => 'Formato',
+                'value' => ($model->fOR ? $model->fOR->FOR_NOMBRE: 'N/A'),
+            ],
             'PEL_NOMBRE',
             'PEL_COSTO',
             'PEL_FECHA_ESTRENO',

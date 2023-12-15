@@ -45,10 +45,10 @@ class ActorPelicula extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'APL_ID' => 'Apl ID',
-            'ACT_ID' => 'Act ID',
-            'PEL_ID' => 'Pel ID',
-            'APL_PAPEL' => 'Apl Papel',
+            'APL_ID' => 'ID',
+            'ACT_ID' => 'Actor',
+            'PEL_ID' => 'Película',
+            'APL_PAPEL' => 'Papel',
         ];
     }
 

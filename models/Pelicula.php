@@ -54,13 +54,13 @@ class Pelicula extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'PEL_ID' => 'Pel ID',
-            'GEN_ID' => 'Gen ID',
-            'DIR_ID' => 'Dir ID',
-            'FOR_ID' => 'For ID',
-            'PEL_NOMBRE' => 'Pel Nombre',
-            'PEL_COSTO' => 'Pel Costo',
-            'PEL_FECHA_ESTRENO' => 'Pel Fecha Estreno',
+            'PEL_ID' => 'ID',
+            'GEN_ID' => 'Género',
+            'DIR_ID' => 'Director',
+            'FOR_ID' => 'Formato',
+            'PEL_NOMBRE' => 'Nombre',
+            'PEL_COSTO' => 'Costo',
+            'PEL_FECHA_ESTRENO' => 'Fecha Estreno',
         ];
     }
 

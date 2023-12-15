@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\ActorSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Actors';
+$this->title = 'Actores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="actor-index">
@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'ACT_ID',
             ['label'=> 'Sexo',
             'value'=>'sEX.SEX_NOMBRE',],
             'ACT_NOMBRE',

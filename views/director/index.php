@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\DirectorSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Directors';
+$this->title = 'Directores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="director-index">

@@ -43,9 +43,9 @@ class Actor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ACT_ID' => 'Act ID',
-            'SEX_ID' => 'Sex ID',
-            'ACT_NOMBRE' => 'Act Nombre',
+            'ACT_ID' => 'ID',
+            'SEX_ID' => 'Sexo',
+            'ACT_NOMBRE' => 'Nombre de actor',
         ];
     }
 

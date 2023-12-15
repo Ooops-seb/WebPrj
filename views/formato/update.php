@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Formato $model */
 
-$this->title = 'Update Formato: ' . $model->FOR_ID;
+$this->title = 'Update Formato: ' . $model->FOR_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Formatos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->FOR_ID, 'url' => ['view', 'FOR_ID' => $model->FOR_ID]];
 $this->params['breadcrumbs'][] = 'Update';

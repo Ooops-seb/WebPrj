@@ -9,7 +9,9 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\Sexo;
+use app\models\Pelicula;
+use app\models\Genero;
+use yii\db\Expression;
 
 class SiteController extends Controller
 {
@@ -62,8 +64,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $listaSexo = Sexo::find()->all();
-        return $this->render('index', ['listaSexo'=>$listaSexo]);
+        $peliculas = Pelicula::find()->all();
+
+        $peliculasAleatorias = Pelicula::find()
+            ->orderBy(new Expression('RAND()'))
+            ->limit(3)
+            ->all();
+
+        return $this->render('index', [
+            'peliculas' => $peliculas,
+            'peliculasRecomendadas' => $peliculasAleatorias,
+        ]);
     }
 
     /**
@@ -127,4 +138,5 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
 }

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Alquiler $model */
 
-$this->title = $model->ALQ_ID;
+$this->title = $model->sOC->SOC_NOMBRE;
 $this->params['breadcrumbs'][] = ['label' => 'Alquilers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -29,9 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'ALQ_ID',
-            'SOC_ID',
-            'PEL_ID',
+            [
+                'label' => 'Socio',
+                'value' => ($model->sOC ? $model->sOC->SOC_NOMBRE: 'N/A'),
+            ],
+            [
+                'label' => 'Pelicula',
+                'value' => ($model->pEL ? $model->pEL->PEL_NOMBRE: 'N/A'),
+            ],
             'ALQ_FECHA_DESDE',
             'ALQ_FECHA_HASTA',
             'ALQ_VALOR',
