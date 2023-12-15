@@ -9,15 +9,14 @@ use yii\helpers\ArrayHelper;
 /** @var app\models\Actor $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
+
 <div class="actor-form">
-    
     <?php $form = ActiveForm::begin(); ?>
     
-    <!-- FIXME hay problemas en el comando ArrayHelper sale un error-->
     <?= $form->field($model, 'SEX_ID')->dropDownList(
-        ArrayHelper::map(Sexo::find(),'SEX_ID','SEX_NOMBRE'),
-        ['prompt'=>'Seleccione...'])
-         ?>
+        ArrayHelper::map(Sexo::find()->all(), 'SEX_ID', 'SEX_NOMBRE'),
+        ['prompt' => 'Seleccione...']
+    ) ?>
 
     <?= $form->field($model, 'ACT_NOMBRE')->textInput(['maxlength' => true]) ?>
 
@@ -26,5 +25,4 @@ use yii\helpers\ArrayHelper;
     </div>
 
     <?php ActiveForm::end(); ?>
-
 </div>
